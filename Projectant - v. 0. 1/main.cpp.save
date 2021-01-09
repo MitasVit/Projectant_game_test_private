@@ -1,0 +1,26 @@
+#include "../Projectant - v. 0. 1/Projectant.h"
+
+using namespace std;
+
+string jmeno1;
+int zeme1;
+
+int main()
+{
+    try{
+        thread first(novaverze,"1.0.0", "prvni vydani, zadne upravy", "CHANGELOG1.md");
+        thread second(novaverze,"1.0.1", "druhe vydani, loading hotovo", "CHANGELOG2.md");
+        thread third(nastav, true);
+        first.join();
+        second.join();
+        third.join();
+        loading();
+        system("CLS");
+        menu();
+        start(jmeno1, zeme1);
+        return VPORADKU;
+    }catch(int chyba){
+        logE(ERROR, chyba, "C:/projectant/logs/main.log");
+        return CHYBA;
+    }
+}

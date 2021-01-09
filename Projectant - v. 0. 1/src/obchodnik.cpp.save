@@ -1,0 +1,65 @@
+
+#include "../include/obchodnik.h"
+#include "../include/definice.h"
+#include "../include/logovani.h"
+
+#include "iostream"
+#include "conio.h"
+#include "time.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "windows.h"
+#include "fstream"
+
+using namespace std;
+
+
+
+void obchodnik::nastav_veci(float aktu_burza, float mena, int danyo){
+    srand(time(NULL));
+    obchodnik::pocetpenez = rand() % 300;
+    obchodnik::pocetpenez = obchodnik.pocetpenez * mena * aktu_burza;
+    nastav_chytrost:
+        obchodnik::chytrost = rand() % 3;
+        if(obchodnik::chytrost != 1 && obchodnik::chytrost != 2 && obchodnik::chytrost != 3){
+            ofstream soubor1("errorE1.log");
+            string text = CurrentDateTime("now");
+            soubor1 << "[" << text << " errorE1 ]";
+            soubor1.close();
+            goto nastav_chytrost;
+        }
+    nastav_jmeno:
+        int cislo = rand() % 10;
+        if(cislo == 1){
+            obchodnik.jmeno = "Nick";
+        }else if(cislo == 2){
+            obchodnik.jmeno = "Gustav";
+        }else if(cislo == 3){
+            obchodnik.jmeno = "Rick";
+        }else if(cislo == 4){
+            obchodnik.jmeno = "Jakub";
+        }else if(cislo == 5){
+            obchodnik.jmeno = "Wolfgang";
+        }else if(cislo == 6){
+            obchodnik.jmeno = "Lismond";
+        }else if(cislo == 7){
+            obchodnik.jmeno = "Barber";
+        }else if(cislo == 8){
+            obchodnik.jmeno = "Donald";
+        }else if(cislo == 9){
+            obchodnik.jmeno = "Joe";
+        }else if(cislo == 10){
+            obchodnik.jmeno = "Jorge";
+        }else{
+            ofstream soubor2("errorE2.log");
+            string text = CurrentDateTime("now");
+            soubor2 << "[" << text << " errorE2 ]";
+            soubor2.close();
+            goto nastav_jmeno;
+        }
+    ofstream soubor3("zapis.txt");
+    soubor3 << "[ " << obchodnik::jmeno << endl << obchodnik::pocetpenez << endl;
+    soubor3 << obchodnik::chytrost << endl << obchodnik::damaxpenez << " ]";
+    soubor3.close();
+
+ }

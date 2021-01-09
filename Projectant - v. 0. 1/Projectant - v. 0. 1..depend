@@ -1,0 +1,72 @@
+# depslib dependency file v1.0
+1610096609 source:c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1.\main.cpp
+	"../Projectant - v. 0. 1/Projectant.h"
+
+1609606025 source:c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\src\prevod.cpp
+	"../include/Prevod.h"
+	<iostream>
+
+1607538798 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\prevod.h
+
+1610141688 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\definice.h
+
+1609614825 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\logovani.h
+	<iostream>
+	<fstream>
+	<ctime>
+	<stdlib.h>
+	"definice.h"
+
+1609760043 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\obchodnik.h
+	"definice.h"
+	"logovani.h"
+	"startaupravy.h"
+	"iostream"
+	"conio.h"
+	"time.h"
+	"stdio.h"
+	"stdlib.h"
+	"windows.h"
+	"fstream"
+
+1610141688 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\startaupravy.h
+	<windows.h>
+	<string.h>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<wchar.h>
+	"definice.h"
+	"logovani.h"
+	<fstream>
+	"nabarvy.h"
+
+1609610749 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\stiracilosy.h
+	<iostream>
+	<conio.h>
+	<time.h>
+	<windows.h>
+
+1609593759 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\colorprintf.h
+	<stdio.h>
+	<stdarg.h>
+	<windows.h>
+
+1609765981 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\projectant.h
+	"../Projectant - v. 0. 1/include/definice.h"
+	"../Projectant - v. 0. 1/include/logovani.h"
+	"../Projectant - v. 0. 1/include/obchodnik.h"
+	"../Projectant - v. 0. 1/include/Prevod.h"
+	"../Projectant - v. 0. 1/include/startaupravy.h"
+	"../Projectant - v. 0. 1/include/stiraciLosy.h"
+	"../Projectant - v. 0. 1/include/nabarvy.h"
+	<exception>
+	<thread>
+	<iostream>
+
+1609766041 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\nabarvy.h
+	<stdio.h>
+	<stdarg.h>
+	<windows.h>
+
