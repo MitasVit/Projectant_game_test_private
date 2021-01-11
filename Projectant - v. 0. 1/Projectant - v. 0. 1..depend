@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1610096609 source:c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1.\main.cpp
+1610368292 source:c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1.\main.cpp
 	"../Projectant - v. 0. 1/Projectant.h"
 
 1609606025 source:c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\src\prevod.cpp
@@ -8,7 +8,7 @@
 
 1607538798 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\prevod.h
 
-1610141688 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\definice.h
+1610359360 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\definice.h
 
 1609614825 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\logovani.h
 	<iostream>
@@ -29,7 +29,7 @@
 	"windows.h"
 	"fstream"
 
-1610141688 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\startaupravy.h
+1610360722 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\startaupravy.h
 	<windows.h>
 	<string.h>
 	<iostream>
@@ -37,10 +37,11 @@
 	<stdlib.h>
 	<conio.h>
 	<wchar.h>
+	<fstream>
 	"definice.h"
 	"logovani.h"
-	<fstream>
 	"nabarvy.h"
+	"nacti,otevri_prace.h"
 
 1609610749 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\stiracilosy.h
 	<iostream>
@@ -53,7 +54,7 @@
 	<stdarg.h>
 	<windows.h>
 
-1609765981 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\projectant.h
+1610368439 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\projectant.h
 	"../Projectant - v. 0. 1/include/definice.h"
 	"../Projectant - v. 0. 1/include/logovani.h"
 	"../Projectant - v. 0. 1/include/obchodnik.h"
@@ -61,6 +62,8 @@
 	"../Projectant - v. 0. 1/include/startaupravy.h"
 	"../Projectant - v. 0. 1/include/stiraciLosy.h"
 	"../Projectant - v. 0. 1/include/nabarvy.h"
+	"../Projectant - v. 0. 1/include/nacti,otevri_prace.h"
+	"../Projectant - v. 0. 1/include/clovek-hrac.h"
 	<exception>
 	<thread>
 	<iostream>
@@ -69,4 +72,20 @@
 	<stdio.h>
 	<stdarg.h>
 	<windows.h>
+
+1610360585 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\clovek-hrac.h
+	"definice.h"
+	"logovani.h"
+	"startaupravy.h"
+	"iostream"
+	"conio.h"
+	"time.h"
+	"stdio.h"
+	"stdlib.h"
+	"windows.h"
+	"fstream"
+
+1610368496 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\nacti,otevri_prace.h
+	<iostream>
+	<fstream>
 

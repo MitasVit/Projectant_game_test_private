@@ -1,7 +1,7 @@
 #ifndef PROJECTANT_H
 #define PROJECTANT_H
 /****************************************************************************
- * Projectant  library v. 1.0.0                                                      *
+ * Projectant  library v. 1.0.2                                                     *
  * Copyright (C) 2020 MitasVit. All Rights Reserved.                        *
  ****************************************************************************
  * Permission is hereby granted, free of charge, to any person obtaining a  *
@@ -23,6 +23,8 @@
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE        *
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                   *
  ****************************************************************************/
+
+ /**MOJE:**/
 #include "../Projectant - v. 0. 1/include/definice.h"
 #include "../Projectant - v. 0. 1/include/logovani.h"
 #include "../Projectant - v. 0. 1/include/obchodnik.h"
@@ -30,6 +32,11 @@
 #include "../Projectant - v. 0. 1/include/startaupravy.h"
 #include "../Projectant - v. 0. 1/include/stiraciLosy.h"
 #include "../Projectant - v. 0. 1/include/nabarvy.h"
+#include "../Projectant - v. 0. 1/include/nacti,otevri_prace.h"
+#include "../Projectant - v. 0. 1/include/clovek-hrac.h"
+/**#include "../Projectant - v. 0. 1/include/nastveni.h"** <- ZBYTECNE **/
+
+ /**NAVIC:**/
 #include <exception>
 #include <thread>
 #include <iostream>

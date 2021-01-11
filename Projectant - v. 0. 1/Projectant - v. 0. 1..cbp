@@ -39,6 +39,7 @@
 		<Unit filename="../Projectant - v. 0. 1/include/definice.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/logovani.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/nabarvy.h" />
+		<Unit filename="../Projectant - v. 0. 1/include/nacti,otevri_prace.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/nastaveni.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/obchodnik.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/startaupravy.h" />

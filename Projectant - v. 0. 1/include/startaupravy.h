@@ -9,10 +9,12 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <wchar.h>
+#include <fstream>
+
 #include "definice.h"
 #include "logovani.h"
-#include <fstream>
 #include "nabarvy.h"
+#include "nacti,otevri_prace.h"
 /**
 *______FUNKCE_________
 *
@@ -72,7 +74,7 @@ void nastav(bool start_jazyk){
    system("TITLE Projectant game v. 1.0.0");
 }
 void vytvorsoubor_prace(){
-    ofstream prace("C:/projectant/trade_data/traders.projectant");
+    ofstream prace("C:/projectant/trade_data/works.projectant");
     prace << "engineer" << endl;
     prace << SALARY_ENGINEER << endl;
 
@@ -123,7 +125,7 @@ void loading(){
         cekej(1);
     }
     if(procent > 100){
-        log(EROR, "Error E9", "C:/projectant/Logs/ErrorE9.log");
+        log(EROR, "Error E9", "C:/projectant/logs/ErrorE9.log");
     }
     cout << endl ;
     nabarvy(MODRA, "Loading success!");
@@ -136,14 +138,27 @@ void start(menu_arg menu2){
     ifstream kontrola_en("C:/projectant/data/en_seting.txt");
     if(kontrola_en.is_open()){
         string te_jmeno;
+        string te_prace;
         int te_zeme;
+        string te_plat;
         int test;
         getline(kontrola_en, te_jmeno);
         kontrola_en >> te_zeme;
+        getline(kontrola_en, te_prace);
+        getline(kontrola_en, te_plat);
         if(te_zeme != 0){
             cout << "Do you want to read: "<< endl;
             cout << "name: "<< te_jmeno << endl;
-            cout << "country: " << te_zeme << endl;
+            cout << "country: ";
+            if(te_zeme == 1){
+                cout << "Czech republic" << endl;
+            }else if(te_zeme == 2){
+                cout << "England" << endl;
+            }else{
+                log(EROR, "Error E10", "C:/projectant/logs/ErrorE10.log");
+            }
+            cout << "work: " << te_prace << endl;
+            cout << "salary: " << te_plat << endl;
             cout << "1 -> yes"<< endl;
             cout << "2 -> no" << endl;
             cin >> test;
@@ -154,6 +169,7 @@ void start(menu_arg menu2){
                 system("CLS");
             }else{
                 cout << endl << "ok, reading excepted";
+                kontrola_en.clear();
                 cout << endl << "press enter to continue";
                 getch();
                 system("CLS");
@@ -163,51 +179,29 @@ void start(menu_arg menu2){
                 cout << "1 -> Czech Republic" << endl;
                 cout << "2 -> England" << endl;
                 cin >> menu2.zemea;
-                ifstream worker("C:/projectant/trade_data/traders.projectant");
-                string work1;
-                string salary1;
-                string work2;
-                string salary2;
-                string work3;
-                string salary3;
-                string work4;
-                string salary4;
-                string work5;
-                string salary5;
-                string work6;
-                string salary6;
-                getline(worker, work1);
-                getline(worker, salary1);
-                getline(worker, work2);
-                getline(worker, salary2);
-                getline(worker, work3);
-                getline(worker, salary3);
-                getline(worker, work4);
-                getline(worker, salary4);
-                getline(worker, work5);
-                getline(worker, salary5);
-                getline(worker, work6);
-                getline(worker, salary6);
-                cout << "Choose a work" << endl;
-                cout << "1 -> " << work1 << endl;
-                cout << "\tsalary: " << salary1 << endl;
-                cout << "2 -> " << work2 << endl;
-                cout << "\tsalary: " << salary2 << endl;
-                cout << "3 -> " << work3 << endl;
-                cout << "\tsalary: " << salary3 << endl;
-                cout << "4 -> " << work4 << endl;
-                cout << "\tsalary: " << salary4 << endl;
-                cout << "5 -> " << work5 << endl;
-                cout << "\tsalary: " << salary5 << endl;
-                cout << "6 -> " << work6 << endl;
-                cout << "\tsalary: " << salary6 << endl;
-                int cislo;
-                cin >>cislo;
-                if(cislo == 1){
-                    menu2.pracea = "engineer";
-                    menu2.plata = SALARY_ENGINEER;
-                }
-                    vytvorsoubor("C:/projectant/data/en_seting.txt", menu2.jmenoa, menu2.zemea, menu2.plata, NULL);
+                zadejpraci:
+                    nacti_prace(4);
+                    int cislo;
+                    cin >>cislo;
+                    if(cislo == 1){
+                        menu2.pracea = "engineer";
+                        menu2.plata = SALARY_ENGINEER;
+                    }else if(cislo == 2){
+                        menu2.pracea = "servicer";
+                        menu2.plata = SALARY_SERVICER;
+                    }else if(cislo == 3){
+                        menu2.pracea = "dustman";
+                        menu2.plata = SALARY_DUSTMAN;
+                    }else if(cislo == 4){
+                        menu2.pracea = "cleaner";
+                        menu2.plata = SALARY_CLEANER;
+                    }else{
+                        nabarvy(CERVENA, "unknown, press any key to continue");
+                        getch();
+                        system("CLS");
+                        goto zadejpraci;
+                    }
+                    uloz_data(menu2.jmenoa, menu2.zemea, menu2.pracea, menu2.plata);
             }
     }else{
         cout << "Enter a name: ";
@@ -216,15 +210,29 @@ void start(menu_arg menu2){
         cout << "1 -> Czech Republic" << endl;
         cout << "2 -> England" << endl;
         cin >> menu2.zemea;
-        cout << "Choose a work" << endl;
-        cout << "1 -> engineer" << endl;
-        int cislo;
-        cin >>cislo;
-        if(cislo == 1){
-            menu2.pracea = "engineer";
-            menu2.plata = 50;
-        }
-        vytvorsoubor("C:/projectant/data/en_seting.txt", menu2.jmenoa, menu2.zemea, menu2.plata, NULL);
+        zadejpraci2:
+            nacti_prace(4);
+            int cislo;
+            cin >>cislo;
+            if(cislo == 1){
+                menu2.pracea = "engineer";
+                menu2.plata = SALARY_ENGINEER;
+            }else if(cislo == 2){
+                menu2.pracea = "servicer";
+                menu2.plata = SALARY_SERVICER;
+            }else if(cislo == 3){
+                menu2.pracea = "dustman";
+                menu2.plata = SALARY_DUSTMAN;
+            }else if(cislo == 4){
+                menu2.pracea = "cleaner";
+                menu2.plata = SALARY_CLEANER;
+            }else{
+                nabarvy(CERVENA, "unknown, press any key to continue");
+                getch();
+                system("CLS");
+                goto zadejpraci2;
+            }
+        uloz_data(menu2.jmenoa, menu2.zemea, menu2.pracea, menu2.plata);
     }
     }else{
         cout << "Enter a name: ";
@@ -233,15 +241,29 @@ void start(menu_arg menu2){
         cout << "1 -> Czech Republic" << endl;
         cout << "2 -> England" << endl;
         cin >> menu2.zemea;
-        cout << "Choose a work" << endl;
-        cout << "1 -> engineer" << endl;
-        int cislo;
-        cin >>cislo;
-        if(cislo == 1){
-            menu2.pracea = "engineer";
-            menu2.plata = 50;
-        }
-        vytvorsoubor("C:/projectant/data/en_seting.txt", menu2.jmenoa, menu2.zemea, menu2.plata, NULL);
+        zadejpraci3:
+            nacti_prace(4);
+            int cislo;
+            cin >>cislo;
+            if(cislo == 1){
+                menu2.pracea = "engineer";
+                menu2.plata = SALARY_ENGINEER;
+            }else if(cislo == 2){
+                menu2.pracea = "servicer";
+                menu2.plata = SALARY_SERVICER;
+            }else if(cislo == 3){
+                menu2.pracea = "dustman";
+                menu2.plata = SALARY_DUSTMAN;
+            }else if(cislo == 4){
+                menu2.pracea = "cleaner";
+                menu2.plata = SALARY_CLEANER;
+            }else{
+                nabarvy(CERVENA, "unknown, press any key to continue");
+                getch();
+                system("CLS");
+                goto zadejpraci3;
+            }
+        uloz_data(menu2.jmenoa, menu2.zemea, menu2.pracea, menu2.plata);
     }
 }
 

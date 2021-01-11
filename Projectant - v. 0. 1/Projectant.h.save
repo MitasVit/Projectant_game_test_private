@@ -29,7 +29,10 @@
 #include "../Projectant - v. 0. 1/include/Prevod.h"
 #include "../Projectant - v. 0. 1/include/startaupravy.h"
 #include "../Projectant - v. 0. 1/include/stiraciLosy.h"
-#include "
+#include "../Projectant - v. 0. 1/include/nabarvy.h"
+#include "../Projectant - v. 0. 1/include/nacti,otevri_prace.h"
+#include "../Projectant - v. 0. 1/include/clovek-hrac.h"
+/**#include "../Projectant - v. 0. 1/include/nastveni.h"** <- ZBYTECNE /
 #include <exception>
 #include <thread>
 #include <iostream>
