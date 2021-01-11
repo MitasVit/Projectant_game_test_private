@@ -1,0 +1,1 @@
+This project has adopted the [MitasVit](https://github.com/MitasVit/). For more information see the [Code of Conduct FAQ](https://github.com/MitasVit/git_config_test1/blob/main/README.md) or contact [mitas.vit@gmail.com](mailto:mitas.vit@gmail.com) with any additional questions or comments.
