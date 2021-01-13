@@ -15,6 +15,8 @@
 #include "logovani.h"
 #include "nabarvy.h"
 #include "nacti,otevri_prace.h"
+#include "plugins.h"
+#include "vipcode.h"
 /**
 *______FUNKCE_________
 *
@@ -66,6 +68,7 @@ void nastav(bool start_jazyk){
    CreateDirectory("C:\\projectant\\homepage", NULL);
    CreateDirectory("C:\\projectant\\startScript", NULL);
    CreateDirectory("C:\\projectant\\trade_data", NULL);
+   /**NEW*/CreateDirectory("C:/projectant/Plugins", NULL);
    if(start_jazyk == true){
         setlocale(LC_ALL, "english");
         SetConsoleCP(1250);
@@ -125,7 +128,7 @@ void loading(){
         cekej(1);
     }
     if(procent > 100){
-        log(EROR, "Error E9", "C:/projectant/Logs/ErrorE9.log");
+        log(EROR, "Error E9", "C:/projectant/logs/ErrorE9.log");
     }
     cout << endl ;
     nabarvy(MODRA, "Loading success!");
@@ -139,13 +142,13 @@ void start(menu_arg menu2){
     if(kontrola_en.is_open()){
         string te_jmeno;
         string te_prace;
-        string te_zeme;
+        int te_zeme;
         string te_plat;
         int test;
         getline(kontrola_en, te_jmeno);
-        getline(te_zeme;
+        kontrola_en >> te_zeme;
         getline(kontrola_en, te_prace);
-        kontrola_en >> te_plat;
+        getline(kontrola_en, te_plat);
         if(te_zeme != 0){
             cout << "Do you want to read: "<< endl;
             cout << "name: "<< te_jmeno << endl;
@@ -155,7 +158,7 @@ void start(menu_arg menu2){
             }else if(te_zeme == 2){
                 cout << "England" << endl;
             }else{
-                log(EROR, "Error E10", "C:/projectant/Logs/ErrorE10.log");
+                log(EROR, "Error E10", "C:/projectant/logs/ErrorE10.log");
             }
             cout << "work: " << te_prace << endl;
             cout << "salary: " << te_plat << endl;
@@ -286,7 +289,7 @@ void menu(menu_arg menu1){
     cout << "1 -> Start" << endl;
     cout << "2 -> Enter a code" << endl;
     cout << "3 -> Add plugin" << endl;
-    cout << "4 -> Help" << endl;
+    cout << "4 -> Help" << endl;/**NENI ZATIM*/
     cout << "5 -> Git" << endl;
     cout << "6 -> Quit" << endl;
     cin >> menu_cislo;
@@ -305,7 +308,9 @@ void menu(menu_arg menu1){
             {
                 system("CLS");
                 cout << endl ;
-                nabarvy(CERVENA, "Entering a code -> in process... Press any key to continue...");
+
+                /**NEW*/zadejKod();
+
                 getch();
                 system("CLS");
                 goto menicko;
@@ -314,7 +319,9 @@ void menu(menu_arg menu1){
             {
                 system("CLS");
                 cout << endl ;
-                nabarvy(CERVENA, "Add a plugin ->in process... Press any key to continue...");
+
+                /**NEW*/vytvorPlugin();
+
                 getch();
                 system("CLS");
                 goto menicko;
@@ -332,7 +339,9 @@ void menu(menu_arg menu1){
             {
                 system("CLS");
                 cout << endl ;
-                nabarvy(CERVENA, "GIT -> in process... Press any key to continue...");
+                cout << "Opening web..." << endl;
+                /**NEW*/ShellExecute(NULL, "open", "https://github.com/MitasVit/Projectant_game_test_private", NULL, NULL, SW_SHOWNORMAL);
+                nabarvy(CERVENA, "Press any key to continue in game...");
                 getch();
                 system("CLS");
                 goto menicko;

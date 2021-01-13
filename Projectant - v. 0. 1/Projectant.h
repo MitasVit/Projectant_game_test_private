@@ -34,6 +34,9 @@
 #include "../Projectant - v. 0. 1/include/nabarvy.h"
 #include "../Projectant - v. 0. 1/include/nacti,otevri_prace.h"
 #include "../Projectant - v. 0. 1/include/clovek-hrac.h"
+#include "../Projectant - v. 0. 1/include/plugins.h"
+#include "../Projectant - v. 0. 1/include/vipcode.h"
+#include "resource.h"
 /**#include "../Projectant - v. 0. 1/include/nastveni.h"** <- ZBYTECNE **/
 
  /**NAVIC:**/

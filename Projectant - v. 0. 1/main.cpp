@@ -1,4 +1,5 @@
 #include "../Projectant - v. 0. 1/Projectant.h"
+#include "../Projectant - v. 0. 1/resource.h"
 
 using namespace std;
 
@@ -20,6 +21,9 @@ int main()
         thread vlakno_verze1(novaverze,"1.0.0", "prvni vydani, zadne upravy", "CHANGELOG1.md");
         thread vlakno_verze2(novaverze,"1.0.1", "druhe vydani, loading hotovo", "CHANGELOG2.md");
         thread vlakno_verze3(novaverze, "1.0.2", "treti vydani, 4 prace, vylepsene menu", "CHANGELOG3.md");
+
+        /**NEW*/thread vlakno_plugin(vytvorScript_plugin, "C:/projectant/Plugins/plugin1.projectant");
+
         /**NASTAVENI SLOZEK, PRACI*/
         thread vlakno_nastav(nastav, true);
         thread vlakno_prace(vytvorsoubor_prace);
@@ -29,6 +33,9 @@ int main()
         vlakno_verze3.join();
         vlakno_nastav.join();
         vlakno_prace.join();
+
+        /**NEW*/vlakno_plugin.join();
+
         /**LOADING - > MENU -> HRA - > */
         system("CLS");
         menu(start_menu);

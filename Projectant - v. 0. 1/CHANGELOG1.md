@@ -1,1 +1,1 @@
-[2021-01-11 13:31:34 - 1.0.0 - prvni vydani, zadne upravy]
+[2021-01-13 11:00:59 - 1.0.0 - prvni vydani, zadne upravy]

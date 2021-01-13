@@ -9,8 +9,8 @@
 
 using namespace std;
 
-void stastnych10(int penize){
-    penize = penize - 35;
+void stastnych10(float penize, float cena){
+    penize = penize - cena;
     int vyhra;
     int cis1;
     int cis2;

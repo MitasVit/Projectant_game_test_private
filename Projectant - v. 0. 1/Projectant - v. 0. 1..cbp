@@ -42,8 +42,17 @@
 		<Unit filename="../Projectant - v. 0. 1/include/nacti,otevri_prace.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/nastaveni.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/obchodnik.h" />
+		<Unit filename="../Projectant - v. 0. 1/include/plugins.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/startaupravy.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/stiraciLosy.h" />
+		<Unit filename="../Projectant - v. 0. 1/include/vipcode.h" />
+		<Unit filename="../Projectant - v. 0. 1/kody.txt" />
+		<Unit filename="../Projectant - v. 0. 1/manifest.xml" />
+		<Unit filename="../Projectant - v. 0. 1/resource.h" />
+		<Unit filename="../Projectant - v. 0. 1/resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="../Projectant - v. 0. 1/resource.rc.save" />
 		<Unit filename="../Projectant - v. 0. 1/src/Prevod.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>

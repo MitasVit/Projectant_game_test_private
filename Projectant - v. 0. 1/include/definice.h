@@ -4,6 +4,9 @@
 #define MENA_CZK 1
 #define MENA_EUR 0.038
 #define MENA_NORMAL 1
+#define MENA_JEN 4.804
+#define MENA_USDOLAR 0.046142
+
 
 #define BURZA_NORMAL 1
 
