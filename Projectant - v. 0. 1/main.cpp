@@ -18,9 +18,9 @@ int main()
         start_menu.pracea = novy.prace;
         start_menu.plata = novy.plat;
         /**ZAPIS VERZI*/
-        thread vlakno_verze1(novaverze,"1.0.0", "prvni vydani, zadne upravy", "CHANGELOG1.md");
-        thread vlakno_verze2(novaverze,"1.0.1", "druhe vydani, loading hotovo", "CHANGELOG2.md");
-        thread vlakno_verze3(novaverze, "1.0.2", "treti vydani, 4 prace, vylepsene menu", "CHANGELOG3.md");
+        thread vlakno_verze1(novaverze,"1.0.0", "prvni vydani, zadne upravy", "changes/CHANGELOG1.md");
+        thread vlakno_verze2(novaverze,"1.0.1", "druhe vydani, loading hotovo", "changes/CHANGELOG2.md");
+        thread vlakno_verze3(novaverze, "1.0.2", "treti vydani, 4 prace, vylepsene menu", "changes/CHANGELOG3.md");
 
         /**NEW*/thread vlakno_plugin(vytvorScript_plugin, "C:/projectant/Plugins/plugin1.projectant");
 

@@ -3,7 +3,7 @@
 #include <richedit.h>
 #include "resource.h"
 
-
+MAINICON ICON "logo_projectant.ico"
 VS_VERSION_INFO VERSIONINFO
  FILEVERSION 1,0,0,1
  PRODUCTVERSION 1,0,0,1

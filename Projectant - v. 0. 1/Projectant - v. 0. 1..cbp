@@ -47,7 +47,9 @@
 		<Unit filename="../Projectant - v. 0. 1/include/stiraciLosy.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/vipcode.h" />
 		<Unit filename="../Projectant - v. 0. 1/kody.txt" />
+		<Unit filename="../Projectant - v. 0. 1/logo_projectant.ico" />
 		<Unit filename="../Projectant - v. 0. 1/manifest.xml" />
+		<Unit filename="../Projectant - v. 0. 1/projectant - help.exe" />
 		<Unit filename="../Projectant - v. 0. 1/resource.h" />
 		<Unit filename="../Projectant - v. 0. 1/resource.rc">
 			<Option compilerVar="WINDRES" />

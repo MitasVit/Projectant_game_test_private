@@ -1,0 +1,1 @@
+[2021-01-15 07:31:42 - 1.0.2 - treti vydani, 4 prace, vylepsene menu]

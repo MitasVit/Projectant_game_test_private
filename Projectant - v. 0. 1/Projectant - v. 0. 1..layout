@@ -2,9 +2,19 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\Projectant - v. 0. 1\include\nastaveni.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1616" topLine="36" />
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\Projectant - v. 0. 1\include\stiraciLosy.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="229" topLine="207" />
+		</Cursor>
+	</File>
+	<File name="..\Projectant - v. 0. 1\Projectant.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2483" topLine="25" />
 		</Cursor>
 	</File>
 	<File name="..\Projectant - v. 0. 1\src\Prevod.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -12,29 +22,9 @@
 			<Cursor1 position="260" topLine="3" />
 		</Cursor>
 	</File>
-	<File name="..\Projectant - v. 0. 1\Projectant.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\Projectant - v. 0. 1\include\vipcode.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="153" topLine="22" />
-		</Cursor>
-	</File>
-	<File name="..\Projectant - v. 0. 1\include\definice.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1169" topLine="19" />
-		</Cursor>
-	</File>
-	<File name="..\Projectant - v. 0. 1\include\logovani.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1169" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="..\Projectant - v. 0. 1\include\nabarvy.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="576" topLine="12" />
-		</Cursor>
-	</File>
-	<File name="..\Projectant - v. 0. 1\include\nacti,otevri_prace.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="253" topLine="0" />
+			<Cursor1 position="862" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="..\Projectant - v. 0. 1\include\clovek-hrac.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -42,9 +32,34 @@
 			<Cursor1 position="381" topLine="4" />
 		</Cursor>
 	</File>
-	<File name="..\Projectant - v. 0. 1\include\nastaveni.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\Projectant - v. 0. 1\include\nacti,otevri_prace.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="253" topLine="45" />
+		</Cursor>
+	</File>
+	<File name="..\Projectant - v. 0. 1\include\definice.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1169" topLine="52" />
+		</Cursor>
+	</File>
+	<File name="..\Projectant - v. 0. 1\include\startaupravy.h" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="10588" topLine="317" />
+		</Cursor>
+	</File>
+	<File name="..\Projectant - v. 0. 1\manifest.xml" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="210" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\Projectant - v. 0. 1\include\logovani.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1169" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="..\Projectant - v. 0. 1\include\nabarvy.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="576" topLine="12" />
 		</Cursor>
 	</File>
 	<File name="..\Projectant - v. 0. 1\include\obchodnik.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -52,14 +67,19 @@
 			<Cursor1 position="753" topLine="6" />
 		</Cursor>
 	</File>
-	<File name="..\Projectant - v. 0. 1\include\startaupravy.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\Projectant - v. 0. 1\include\plugins.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1370" topLine="0" />
+			<Cursor1 position="1289" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="..\Projectant - v. 0. 1\include\stiraciLosy.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\Projectant - v. 0. 1\resource.rc" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="229" topLine="237" />
+			<Cursor1 position="93" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="94" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

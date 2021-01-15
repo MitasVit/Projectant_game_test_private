@@ -271,7 +271,7 @@ void start(menu_arg menu2){
 }
 
 void menu(menu_arg menu1){
-    loading();
+    /*loading();*/
     system("CLS");
     menicko:
     nabarvy(ZELENA, "\t __    __    ___          __   ___  _____   ___            _____");
@@ -289,7 +289,7 @@ void menu(menu_arg menu1){
     cout << "1 -> Start" << endl;
     cout << "2 -> Enter a code" << endl;
     cout << "3 -> Add plugin" << endl;
-    cout << "4 -> Help" << endl;/**NENI ZATIM*/
+    cout << "4 -> Help" << endl;
     cout << "5 -> Git" << endl;
     cout << "6 -> Quit" << endl;
     cin >> menu_cislo;
@@ -311,8 +311,6 @@ void menu(menu_arg menu1){
 
                 /**NEW*/zadejKod();
 
-                getch();
-                system("CLS");
                 goto menicko;
             }
         case 3:
@@ -330,7 +328,8 @@ void menu(menu_arg menu1){
             {
                 system("CLS");
                 cout << endl ;
-                nabarvy(CERVENA, "Help -> in process... Press any key to continue...");
+                ShellExecute(NULL, "open", "projectant - help.exe", NULL, NULL, SW_SHOWNORMAL);
+                cout << "Press enter to return to menu.";
                 getch();
                 system("CLS");
                 goto menicko;
