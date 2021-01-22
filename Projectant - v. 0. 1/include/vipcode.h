@@ -16,7 +16,7 @@ void vytvorsoubor_jenzprava(const char *cesta, string zprava1){
     if(kontrola.is_open()){
         kontrola.close();
     }else{
-        log(EROR, "Error E3", "C:\\projectant\\logs\\errorE3.log");
+        logv(EROR, "Error E3", "C:\\projectant\\logs\\errorE3.log");
         kontrola.close();
     }
 

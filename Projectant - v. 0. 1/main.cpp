@@ -1,3 +1,5 @@
+#define _WIN32_WINNT 0x0500
+
 #include "../Projectant - v. 0. 1/Projectant.h"
 #include "../Projectant - v. 0. 1/resource.h"
 
@@ -22,10 +24,10 @@ int main()
         thread vlakno_verze2(novaverze,"1.0.1", "druhe vydani, loading hotovo", "changes/CHANGELOG2.md");
         thread vlakno_verze3(novaverze, "1.0.2", "treti vydani, 4 prace, vylepsene menu", "changes/CHANGELOG3.md");
 
-        /**NEW*/thread vlakno_plugin(vytvorScript_plugin, "C:/projectant/Plugins/plugin1.projectant");
+        thread vlakno_plugin(vytvorScript_plugin, "C:/projectant/Plugins/plugin1.projectant");
 
         /**NASTAVENI SLOZEK, PRACI*/
-        thread vlakno_nastav(nastav, true);
+        thread vlakno_nastav(nastav);
         thread vlakno_prace(vytvorsoubor_prace);
         /**ZAPOJ VLAKNA*/
         vlakno_verze1.join();
@@ -34,12 +36,14 @@ int main()
         vlakno_nastav.join();
         vlakno_prace.join();
 
-        /**NEW*/vlakno_plugin.join();
+        vlakno_plugin.join();
 
         /**LOADING - > MENU -> HRA - > */
         system("CLS");
-        menu(start_menu);
 
+
+        thread menicko(menu, start_menu);
+        menicko.join();
 
         /** !! NEFUNGUJE: !!
 
@@ -57,7 +61,7 @@ int main()
     }catch(int chyba){
 
         /**NECO SE POKAZILO*/
-        logE(ERROR, chyba, "C:/projectant/logs/main.log");
+        logEv(ERROR, chyba, "C:/projectant/logs/main.log");
 
         /**POZN.: SOUPIS ZACHYCENÝCH CHYB Z OSTATNÍH SOUBORU VIZ DEFINICE.H*/
         return CHYBA;

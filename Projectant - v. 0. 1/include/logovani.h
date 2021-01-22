@@ -6,6 +6,7 @@
 #include <ctime>
 #include <stdlib.h>
 #include "definice.h"
+#include <thread>
 
 using namespace std;
 
@@ -52,5 +53,14 @@ void logE(string druh_zpravy, int zprava,  const char* soubor){
             goto zapisdata;
             kontrola.close();
         }
+}
+
+void logv(string _druh_zpravy, string _zprava,  const char* _soubor){
+    thread logs(log, _druh_zpravy, _zprava, _soubor);
+    logs.join();
+}
+void logEv(string druh_zpravy, int zprava,  const char* soubor){
+    thread logs(logE, druh_zpravy, zprava, soubor);
+    logs.join();
 }
 #endif // LOGOVANI_H

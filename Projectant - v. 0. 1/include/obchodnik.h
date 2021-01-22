@@ -24,13 +24,13 @@ class obchodnik{
         srand(time(NULL));
         pocetpenez = rand() % 300;
         if(pocetpenez > 300 || pocetpenez < 1){
-            log(EROR, "Error E8", "C:/projectant/logs/ErrorE8");
+            logv(EROR, "Error E8", "C:/projectant/logs/ErrorE8");
         }
         pocetpenez = pocetpenez * mena * aktu_burza;
         nastav_chytrost:
             chytrost = rand() % 3;
             if(chytrost != 1 && chytrost != 2 && chytrost != 3){
-                log(EROR, "Error E1", "C:/projectant/logs/errorE1.log");
+                logv(EROR, "Error E1", "C:/projectant/logs/errorE1.log");
                 goto nastav_chytrost;
             }
             if(chytrost == 1){
@@ -63,49 +63,49 @@ class obchodnik{
             }else if(cislo == 10){
                 jmeno = "Jorge";
             }else{
-                log(EROR, "Error E2", "C:/projectant/logs/errorE2.log");
+                logv(EROR, "Error E2", "C:/projectant/logs/errorE2.log");
                 goto nastav_jmeno;
             }
         if(danyo == 1){
-            vytvorsoubor("C:\\projectant\\data\\zapis1.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis1.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 2){
-            vytvorsoubor("C:\\projectant\\data\\zapis2.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis2.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 3){
-            vytvorsoubor("C:\\projectant\\data\\zapis3.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis3.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 4){
-            vytvorsoubor("C:\\projectant\\data\\zapis4.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis4.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 5){
-            vytvorsoubor("C:\\projectant\\data\\zapis5.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis5.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 6){
-            vytvorsoubor("C:\\projectant\\data\\zapis6.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis6.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 7){
-            vytvorsoubor("C:\\projectant\\data\\zapis7.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis7.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 8){
-            vytvorsoubor("C:\\projectant\\data\\zapis8.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis8.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 9){
-            vytvorsoubor("C:\\projectant\\data\\zapis9.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis9.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 10){
-            vytvorsoubor("C:\\projectant\\data\\zapis10.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis10.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 11){
-            vytvorsoubor("C:\\projectant\\data\\zapis11.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis11.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 12){
-            vytvorsoubor("C:\\projectant\\data\\zapis12.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis12.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 13){
-            vytvorsoubor("C:\\projectant\\data\\zapis13.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis13.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 14){
-            vytvorsoubor("C:\\projectant\\data\\zapis14.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis14.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 15){
-            vytvorsoubor("C:\\projectant\\data\\zapis15.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis15.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 16){
-            vytvorsoubor("C:\\projectant\\data\\zapis16.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis16.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 17){
-            vytvorsoubor("C:\\projectant\\data\\zapis17.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis17.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 18){
-            vytvorsoubor("C:\\projectant\\data\\zapis18.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis18.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 19){
-            vytvorsoubor("C:\\projectant\\data\\zapis19.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis19.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }else if(danyo == 20){
-            vytvorsoubor("C:\\projectant\\data\\zapis20.txt", jmeno, chytrost, pocetpenez, damaxpenez);
+            vytvorsouborv("C:\\projectant\\data\\zapis20.txt", jmeno, chytrost, pocetpenez, damaxpenez);
         }
     }
 };

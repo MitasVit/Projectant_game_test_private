@@ -37,11 +37,15 @@
 		<Unit filename="../Projectant - v. 0. 1/include/Prevod.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/clovek-hrac.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/definice.h" />
+		<Unit filename="../Projectant - v. 0. 1/include/herni_menu.h" />
+		<Unit filename="../Projectant - v. 0. 1/include/jate.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/logovani.h" />
-		<Unit filename="../Projectant - v. 0. 1/include/nabarvy.h" />
+		<Unit filename="../Projectant - v. 0. 1/include/messageBoxReturn.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/nacti,otevri_prace.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/nastaveni.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/obchodnik.h" />
+		<Unit filename="../Projectant - v. 0. 1/include/ostream.h" />
+		<Unit filename="../Projectant - v. 0. 1/include/piskvorky.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/plugins.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/startaupravy.h" />
 		<Unit filename="../Projectant - v. 0. 1/include/stiraciLosy.h" />

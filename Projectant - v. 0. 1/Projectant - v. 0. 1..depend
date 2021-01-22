@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1610692104 source:c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1.\main.cpp
+1611312727 source:c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1.\main.cpp
 	"../Projectant - v. 0. 1/Projectant.h"
 	"../Projectant - v. 0. 1/resource.h"
 
@@ -11,14 +11,15 @@
 
 1610521254 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\definice.h
 
-1609614825 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\logovani.h
+1611306111 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\logovani.h
 	<iostream>
 	<fstream>
 	<ctime>
 	<stdlib.h>
 	"definice.h"
+	<thread>
 
-1609760043 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\obchodnik.h
+1611306826 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\obchodnik.h
 	"definice.h"
 	"logovani.h"
 	"startaupravy.h"
@@ -30,7 +31,7 @@
 	"windows.h"
 	"fstream"
 
-1610692298 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\startaupravy.h
+1611313877 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\startaupravy.h
 	<windows.h>
 	<string.h>
 	<iostream>
@@ -39,12 +40,16 @@
 	<conio.h>
 	<wchar.h>
 	<fstream>
+	<nabarvy>
+	<thread>
 	"definice.h"
 	"logovani.h"
-	"nabarvy.h"
 	"nacti,otevri_prace.h"
 	"plugins.h"
 	"vipcode.h"
+	"herni_menu.h"
+	"jate.h"
+	"messageBoxReturn.h"
 
 1610478023 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\stiracilosy.h
 	<iostream>
@@ -57,7 +62,7 @@
 	<stdarg.h>
 	<windows.h>
 
-1610610950 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\projectant.h
+1610698454 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\projectant.h
 	"../Projectant - v. 0. 1/include/definice.h"
 	"../Projectant - v. 0. 1/include/logovani.h"
 	"../Projectant - v. 0. 1/include/obchodnik.h"
@@ -69,6 +74,7 @@
 	"../Projectant - v. 0. 1/include/clovek-hrac.h"
 	"../Projectant - v. 0. 1/include/plugins.h"
 	"../Projectant - v. 0. 1/include/vipcode.h"
+	"../Projectant - v. 0. 1/include/herni_menu.h"
 	"resource.h"
 	<exception>
 	<thread>
@@ -121,7 +127,7 @@
 	<richedit.h>
 	"resource.h"
 
-1610611648 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\vipcode.h
+1611306952 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\vipcode.h
 	<iostream>
 	<fstream>
 	"logovani.h"
@@ -138,4 +144,44 @@
 
 1610564540 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\console\targetver.h
 	"winsock.h"
+
+1610700367 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\herni_menu.h
+	<iostream>
+	<nabarvy>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	<stdio.h>
+
+1611309587 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\jate.h
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	<sstream>
+	<iostream>
+	<fstream>
+	<windows.h>
+	<nabarvy>
+	<conio.h>
+	<dirent.h>
+	<time.h>
+	<thread>
+	<tchar.h>
+	<wchar.h>
+	<locale>
+	"piskvorky.h"
+	"messageBoxReturn.h"
+	"ostream.h"
+
+1611155255 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\piskvorky.h
+	<iostream>
+	<windows.h>
+
+1611312033 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\messageboxreturn.h
+	<windows.h>
+	"jate.h"
+
+1611157517 c:\users\uzivatel\desktop\vita-projecty\c++programuju\c++ 2,0\projectant - v. 0. 1\include\ostream.h
+	<iostream>
+	<vector>
 

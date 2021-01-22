@@ -36,6 +36,7 @@
 #include "../Projectant - v. 0. 1/include/clovek-hrac.h"
 #include "../Projectant - v. 0. 1/include/plugins.h"
 #include "../Projectant - v. 0. 1/include/vipcode.h"
+#include "../Projectant - v. 0. 1/include/herni_menu.h"
 #include "resource.h"
 /**#include "../Projectant - v. 0. 1/include/nastveni.h"** <- ZBYTECNE **/
 

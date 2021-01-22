@@ -10,13 +10,20 @@
 #include <conio.h>
 #include <wchar.h>
 #include <fstream>
+#include <nabarvy>
+#include <thread>
+
+#define _WIN32_WINNT 0x0500
 
 #include "definice.h"
 #include "logovani.h"
-#include "nabarvy.h"
 #include "nacti,otevri_prace.h"
 #include "plugins.h"
 #include "vipcode.h"
+#include "herni_menu.h"
+#include "jate.h"
+#include "messageBoxReturn.h"
+
 /**
 *______FUNKCE_________
 *
@@ -56,25 +63,26 @@ void vytvorsoubor(const char *cesta, string zprava1, int zprava2, float zprava3,
     if(kontrola.is_open()){
         kontrola.close();
     }else{
-        log(EROR, "Error E3", "C:\\projectant\\logs\\errorE3.log");
+        logv(EROR, "Error E3", "C:\\projectant\\logs\\errorE3.log");
         kontrola.close();
     }
 
 }
-void nastav(bool start_jazyk){
-   CreateDirectory("C:\\projectant", NULL);
-   CreateDirectory("C:\\projectant\\logs", NULL);
-   CreateDirectory("C:\\projectant\\data", NULL);
-   CreateDirectory("C:\\projectant\\homepage", NULL);
-   CreateDirectory("C:\\projectant\\startScript", NULL);
-   CreateDirectory("C:\\projectant\\trade_data", NULL);
-   /**NEW*/CreateDirectory("C:/projectant/Plugins", NULL);
-   if(start_jazyk == true){
-        setlocale(LC_ALL, "english");
-        SetConsoleCP(1250);
-        SetConsoleOutputCP(1250);
-   }
-   system("TITLE Projectant game v. 1.0.0");
+void vytvorsouborv(const char *cesta, string zprava1, int zprava2, float zprava3, float zprava4){
+    thread soubory(vytvorsoubor, cesta, zprava1, zprava2, zprava3, zprava4);
+    soubory.join();
+}
+void nastav(){
+   Konzole testik;
+   testik.vytvorSlozku("C:\\projectant");
+   testik.vytvorSlozku("C:\\projectant\\logs");
+   testik.vytvorSlozku("C:\\projectant\\data");
+   testik.vytvorSlozku("C:\\projectant\\homepage");
+   testik.vytvorSlozku("C:\\projectant\\startScript");
+   testik.vytvorSlozku("C:\\projectant\\Plugins");
+   testik.vytvorSlozku("C:\\projectant\\trade_data");
+   testik.nastavNormal(false);
+   ///testik.nastavFullScreen();
 }
 void vytvorsoubor_prace(){
     ofstream prace("C:/projectant/trade_data/works.projectant");
@@ -128,7 +136,7 @@ void loading(){
         cekej(1);
     }
     if(procent > 100){
-        log(EROR, "Error E9", "C:/projectant/logs/ErrorE9.log");
+        logv(EROR, "Error E9", "C:/projectant/logs/ErrorE9.log");
     }
     cout << endl ;
     nabarvy(MODRA, "Loading success!");
@@ -143,12 +151,12 @@ void start(menu_arg menu2){
         string te_jmeno;
         string te_prace;
         int te_zeme;
-        string te_plat;
+        int te_plat;
         int test;
         getline(kontrola_en, te_jmeno);
         kontrola_en >> te_zeme;
         getline(kontrola_en, te_prace);
-        getline(kontrola_en, te_plat);
+        kontrola_en >> te_plat;
         if(te_zeme != 0){
             cout << "Do you want to read: "<< endl;
             cout << "name: "<< te_jmeno << endl;
@@ -158,7 +166,7 @@ void start(menu_arg menu2){
             }else if(te_zeme == 2){
                 cout << "England" << endl;
             }else{
-                log(EROR, "Error E10", "C:/projectant/logs/ErrorE10.log");
+                logv(EROR, "Error E10", "C:/projectant/logs/ErrorE10.log");
             }
             cout << "work: " << te_prace << endl;
             cout << "salary: " << te_plat << endl;
@@ -183,6 +191,7 @@ void start(menu_arg menu2){
                 cout << "2 -> England" << endl;
                 cin >> menu2.zemea;
                 zadejpraci:
+                    cout << "select a work: " << endl;
                     nacti_prace(4);
                     int cislo;
                     cin >>cislo;
@@ -214,6 +223,7 @@ void start(menu_arg menu2){
         cout << "2 -> England" << endl;
         cin >> menu2.zemea;
         zadejpraci2:
+            cout << "select a work: " << endl;
             nacti_prace(4);
             int cislo;
             cin >>cislo;
@@ -245,6 +255,7 @@ void start(menu_arg menu2){
         cout << "2 -> England" << endl;
         cin >> menu2.zemea;
         zadejpraci3:
+            cout << "select a work: " << endl;
             nacti_prace(4);
             int cislo;
             cin >>cislo;
@@ -272,6 +283,7 @@ void start(menu_arg menu2){
 
 void menu(menu_arg menu1){
     /*loading();*/
+    Boxe();
     system("CLS");
     menicko:
     nabarvy(ZELENA, "\t __    __    ___          __   ___  _____   ___            _____");
@@ -299,7 +311,107 @@ void menu(menu_arg menu1){
                 system("CLS");
                 cout << endl;
                 start(menu1);
-                cout << endl;
+                system("CLS");
+                bool test2 = true;
+                setcursor(0,0);
+                mainmenu:
+                cout << "     MAIN MENU" << endl;
+                /*herniMenu(0);*/
+                cout << "-------------------" << endl;
+                cout << "|     1. Shop     |" << endl;
+                cout << "|-----------------|" << endl;
+                cout << "|   2. Inventory  |" << endl;
+                cout << "|-----------------|" << endl;
+                cout << "|   3. Business   |" << endl;
+                cout << "|-----------------|" << endl;
+                cout << "|    4. Games     |" << endl;
+                cout << "|-----------------|" << endl;
+                cout << "|    5. Bonus     |" << endl;
+                cout << "|-----------------|" << endl;
+                cout << "|     6. Help     |" << endl;
+                cout << "|-----------------|" << endl;
+                cout << "|   7. Settings   |" << endl;
+                cout << "|-----------------|" << endl;
+                cout << "|     8. Quit     |" << endl;
+                cout << "-------------------" << endl << endl;
+                int nums;
+                cout << "Enter a number: ";
+                cin >> nums;
+                switch(nums){
+                    case 1:
+                        {
+                            cout << "shop - in work, press any key to continue...";
+                            getch();
+                            system("CLS");
+                            goto mainmenu;
+                            break;
+                        }
+                    case 2:
+                        {
+                            cout << "inventory - in work, press any key to continue...";
+                            getch();
+                            system("CLS");
+                            goto mainmenu;
+                            break;
+                        }
+                    case 3:
+                        {
+                            cout << "business - in work, press any key to continue...";
+                            getch();
+                            system("CLS");
+                            goto mainmenu;
+                            break;
+                        }
+                    case 4:
+                        {
+                            cout << "games - in work, press any key to continue...";
+                            getch();
+                            system("CLS");
+                            goto mainmenu;
+                            break;
+                        }
+                    case 5:
+                        {
+                            cout << "bonus - in work, press any key to continue...";
+                            getch();
+                            system("CLS");
+                            goto mainmenu;
+                            break;
+                        }
+                    case 6:
+                        {
+                            system("CLS");
+                            cout << endl ;
+                            ShellExecute(NULL, "open", "projectant - help.exe", NULL, NULL, SW_SHOWNORMAL);
+                            cout << "Press enter to return to menu.";
+                            getch();
+                            system("CLS");
+                            break;
+                        }
+                    case 7:
+                        {
+                            cout << "setting - in work, press any key to continue...";
+                            getch();
+                            system("CLS");
+                            goto mainmenu;
+                            break;
+                        }
+                    case 8:
+                        {
+                            system("CLS");
+                            cout << endl ;
+                            nabarvy(CERVENA, "Quiting,  Press any key to continue...");
+                            getch();
+                            exit(0);
+                            break;
+                        }
+                    default:
+                        {
+                            system("CLS");
+                            goto mainmenu;
+                            break;
+                        }
+                }
                 getch();
                 system("CLS");
                 goto menicko;
@@ -308,18 +420,14 @@ void menu(menu_arg menu1){
             {
                 system("CLS");
                 cout << endl ;
-
-                /**NEW*/zadejKod();
-
+                zadejKod();
                 goto menicko;
             }
         case 3:
             {
                 system("CLS");
                 cout << endl ;
-
-                /**NEW*/vytvorPlugin();
-
+                vytvorPlugin();
                 getch();
                 system("CLS");
                 goto menicko;
@@ -339,7 +447,7 @@ void menu(menu_arg menu1){
                 system("CLS");
                 cout << endl ;
                 cout << "Opening web..." << endl;
-                /**NEW*/ShellExecute(NULL, "open", "https://github.com/MitasVit/Projectant_game_test_private", NULL, NULL, SW_SHOWNORMAL);
+                ShellExecute(NULL, "open", "https://github.com/MitasVit/Projectant_game_test_private", NULL, NULL, SW_SHOWNORMAL);
                 nabarvy(CERVENA, "Press any key to continue in game...");
                 getch();
                 system("CLS");
@@ -404,7 +512,7 @@ void OtevriScriptOtxt(){
         LPCTSTR helpFile = "C:/projectant/startScript/opentTxt.bat";
         ShellExecute(NULL, "open", helpFile, NULL, NULL, SW_SHOWNORMAL);
     }else{
-        log(EROR, "Error E6", "C:/projectant/Logs/ErrorE6.log");
+        logv(EROR, "Error E6", "C:/projectant/logs/ErrorE6.log");
     }
 }
 void OtevriScriptOexe(){
@@ -413,7 +521,7 @@ void OtevriScriptOexe(){
         LPCTSTR helpFile = "C:/projectant/startScript/opentExe.bat";
         ShellExecute(NULL, "open", helpFile, NULL, NULL, SW_SHOWNORMAL);
     }else{
-        log(EROR, "Error E7", "C:/projectant/Logs/ErrorE7.log");
+        logv(EROR, "Error E7", "C:/projectant/logs/ErrorE7.log");
     }
 }
 void vytvorWeb(){
@@ -435,7 +543,7 @@ void otevryWeb(){
         LPCTSTR helpFile = "C:/projectant/homepage/stranky.html";
         ShellExecute(NULL, "open", helpFile, NULL, NULL, SW_SHOWNORMAL);
     }else{
-        log(EROR, "Error E6", "C:/projectant/Logs/ErrorE6.log");
+        logv(EROR, "Error E6", "C:/projectant/logs/ErrorE6.log");
     }
 
 }
